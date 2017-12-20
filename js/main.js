@@ -60,17 +60,43 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 14:
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
-(function webpackMissingModule() { throw new Error("Cannot find module \"./assets/js/index.js\""); }());
+module.exports = __webpack_require__(11);
 
+
+/***/ }),
+
+/***/ 11:
+/***/ (function(module, exports) {
+
+var text = document.getElementById("not-wednesday");
+var video = document.getElementById("jimmy");
+var frog = document.getElementById("frog");
+
+var date = new Date();
+var day = date.getDay();
+
+if (day == 3) {
+  text.remove();
+  frog.remove();
+  document.body.style.backgroundColor = "#000";
+  console.log("It is wednesday my dudes :)");
+} else {
+  video.remove();
+}
+
+video.addEventListener('click', function () {
+  video.play();
+}, false);
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.js.map
